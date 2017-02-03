@@ -4,91 +4,45 @@ body {
   letter-spacing: 0.1em;
 }
 
-.panel-body {
-  color: #EEE;
-}
-
-.panel {
-  border: none;
-  background-color: #333;
-  box-shadow: none;
-  text-decoration: none;
-}
-
-.traits {
-  text-align: center;
-  color: #AAA;
-}
-
-.about {
-  background-color: rgba(0,0,0,0.5);
-  border: none;
-}
-
-.about hr{
-  border-color: #111;
-}
-
-.skills {
-  letter-spacing: 0.05em;
-  text-align: left;
-  font-family: 'Cutive Mono', monospace;
-}
-
-.skills-list {
-  list-style-type: none;
-}
-
-.skills li:before {
-  content: "- ";
-}
-
 .menu-button {
-  display: block;
-  line-height: 2em;
   text-align: center;
   vertical-align: middle;
-  padding: 1em;
-  width: 100%;
-  animation-name: menu-button-off;
-  animation-duration: 0.1s;
 }
 
 .menu-button:hover {
   text-decoration: none;
   cursor: pointer;
-  animation-name: menu-button-hover;
-  animation-duration: 0.3s;
-  box-shadow: inset 0px 0px 5px #222;
 }
 
-span.menu-button-text {
+.menu-button-bg {
+  padding: 1em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 50% 0 50%);
+}
+
+.menu-button:hover > .menu-button-bg {
+  background: url('../bg.png');
+  transition: clip-path 0.6s;
+  clip-path: inset(0 0 0 0);
+}
+
+.menu-button-text {
+  /*position: relative;*/
   text-decoration: none;
   text-shadow: 2px 1px 1px rgba(255,255,255,0.1);
   color: #111;
   font: 7em 'VT323', monospace;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  transition: transform 0.1s;
+  transform: scale(1,1);
 }
 
-span.menu-button-text:hover {
+.menu-button-text:hover {
   text-decoration: none;
-  animation-name: menu-text-hover;
-  animation-duration: 0.3s;
-  text-shadow: 2px 1px 1px #878378;
-}
-
-@keyframes menu-text-hover {
-  0% { text-shadow: 2px 1px 1px rgba(255,255,255,0.1); }
-  100% { text-shadow: 2px 1px 1px #878378; }
-}
-
-@keyframes menu-button-hover {
-  0% { box-shadow: inset 0px 0px 1px #222 }
-  100% { box-shadow: inset 0px 0px 5px #222 }
-}
-
-@keyframes menu-button-off {
-  0% { box-shadow: inset 0px 0px 5px #222 }
-  100% { box-shadow: inset 0px 0px 1px #222 }
+  color: rgba(213, 204, 204, 0.6);
+  transform: scale(1.1,1);
+  transition: transform 7s ease-out;
 }

@@ -1,5 +1,5 @@
 body {
-  background: #333 url('../stardust.png');
+  background: #333 url('../img/stardust.png');
   font: 1.5em 'VT323', normal;
   letter-spacing: 0.1em;
   color:white;
@@ -9,16 +9,26 @@ body {
   color: #BBB;
   font: 1em 'Cutive+Mono', monospace;
   padding: 1em;
+  text-align: center;
 }
 
-.about {
-  position: relative;
-  display: block;
-  font-size: 1.5em;
-  color: #FFF;
-  background: #000;
-  width: 100%;
-  box-sizing: border-box;
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+.row {
+  
+}
+
+.panel {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hidden {
+  display: none;
 }
 
 .menu-button {
@@ -27,36 +37,19 @@ body {
 }
 
 .menu-button:hover {
-  text-decoration: none;
   cursor: pointer;
 }
 
-.menu-button-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: clip-path 0.3s;
-  clip-path: inset(0 50% 0 50%);
-  background: url('../bg.png');
+#about-button:hover {
+  background: url('../img/stars.png');
 }
 
-.menu-button:hover > .menu-button-bg {
-  /*background: url('../bg.png') repeat-x;*/
-  transition: clip-path 0.3s, transform 5s;
-  clip-path: inset(0 0 0 0);
-  transform: rotate(0deg);
+#portfolio-button:hover {
+  background: url('../img/dirt.png');
 }
 
-.menu-button:hover > .menu-button-bg:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  background: url('../bg.png') repeat-x;
-  animation: background-scroll 1s alternate infinite;
+#contact-button:hover {
+  background: url('../img/city.png');
 }
 
 .menu-button-text {
@@ -67,19 +60,13 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  transition: transform 0.1s;
-  transform: scale(1,1);
   user-select: none;
 }
 
 .menu-button-text:hover {
   text-decoration: none;
   color: rgba(215,215,215,0.8);
-  transform: scale(1.1,1);
-  transition: transform 6s ease-out, color 0.6s;
-}
-
-@keyframes background-scroll {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 0% 10%; }
+  transform: scale(1.1,1.1);
+  transition: transform 8s ease-out, color 0.4s;
+  text-shadow: 5px 5px 8px rgba(0,0,0,1);
 }

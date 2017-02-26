@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Joseph Clark - Astronaut in training</title>
-    
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Joseph Clark - Astronaut in training</title>
+        
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
+    </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="menu-button" id="about">
-                <div class="menu-button-text">About</div>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="menu-button" id="about-button">
+                    <div class="menu-button-text" data-panel-target="about">About</div>
+                    <div class="panel hidden" id="about">
+                        <p>
+                            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu-button" id="portfolio-button">
+                    <div class="menu-button-text" data-panel-target="portfolio">Portfolio</div>
+                </div>
+                <div class="panel hidden" id="portfolio">
+                    <p>
+                        Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu-button" id="contact-button">
+                    <div class="menu-button-text" data-panel-target="contact">Contact</div>
+                </div>
+                <div class="panel hidden" id="contact">
+                    <p>
+                        Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="signature">
+                &copy Joseph Clark 2017
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="menu-button" id="portfolio">
-                <div class="menu-button-text">Portfolio</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="menu-button" id="contact">
-                <div class="menu-button-text">Connect</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="signature">
-            &copy Joseph Clark 2017
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <script src="js/main.js"></script>
+    </body>
 
 </html>
